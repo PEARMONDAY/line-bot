@@ -16,6 +16,11 @@ foreach ($request_json['events'] as $event)
 			
 			$reply_message = 'ฉันได้รับข้อความ "'. $text.'" ของคุณแล้ว!'; 
 			
+			if("ขอชื่อผู้พัฒนาระบบ"==$text){
+			
+				$reply_message = "นางสาว นพัสร กิจประเสริฐ"; 
+			}
+			
 		} else {
 			$reply_message = 'ฉันได้รับ "'.$event['message']['type'].'" ของคุณแล้ว!';
 		}
