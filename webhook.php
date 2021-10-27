@@ -20,6 +20,10 @@ foreach ($request_json['events'] as $event)
 			
 				$reply_message = "นางสาว นพัสร กิจประเสริฐ"; 
 			}
+			if(("COVID-19"==$text)||("COVID-19"==$text)||("สถานการณ์โควิด"==$text)||("โควิดวันนี้"==$text)){
+			
+				$reply_message = "เสียชีวิต"; 
+			}
 			
 		} else {
 			$reply_message = 'ฉันได้รับ "'.$event['message']['type'].'" ของคุณแล้ว!';
