@@ -20,7 +20,7 @@ foreach ($request_json['events'] as $event)
 			
 				$reply_message = "นางสาว นพัสร กิจประเสริฐ"; 
 			}
-			if(("COVID-19"==$text)||("COVID-19"==$text)||("สถานการณ์โควิด"==$text)||("โควิดวันนี้"==$text)){
+			if(("COVID-19"==$text)||("Covid-19"==$text)||("สถานะการณ์โควิด"==$text)||("โควิดวันนี้"==$text)){
 			
 				$reply_message = "เสียชีวิต"; 
 			}
