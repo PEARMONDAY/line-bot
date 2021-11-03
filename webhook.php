@@ -18,17 +18,15 @@ foreach ($request_json['events'] as $event)
 			
 			if("ขอชื่อผู้พัฒนาระบบ"==$text){
 			
-				$reply_message = "นางสาว นพัสร กิจประเสริฐ"; 
+				$reply_message = "นางสาว นพัสร กิจประเสริฐ 63120501082"; 
 			}
-			if(("COVID-19"==$text)||("Covid-19"==$text)||("สถานะการณ์โควิด"==$text)||("โควิดวันนี้"==$text)){
+			if(("KMUTT"==$text)||("มจธ"==$text)||("เส้นทางไปที่มาหาลัยKMUTT"==$text)||("ไปมหาลัย"==$text)){
 			
-				$reply_message = "เสียชีวิต";
+				$reply_message = "เส้นทางไปที่มาหาลัยKMUTT";
 				
-				$result = file_get_contents('https://covid19.ddc.moph.go.th/api/Cases/today-cases-all');   // Get request content
+				$result = file_get_contents('https://goo.gl/maps/D2sFxAPfZdCfkvcRA');   // Get request content
 
                                 $result_json = json_decode($result, true);   // Decode JSON request
-				
-				$reply_message = "ตาย" .$result_json["new_death"] ."คน";
 			}
 			
 		} else {
