@@ -23,8 +23,9 @@ foreach ($request_json['events'] as $event)
 			if(("KMUTT"==$text)||("มจธ"==$text)||("เส้นทางไปที่มาหาลัยKMUTT"==$text)||("ไปมหาลัย"==$text)){
 			
 				$reply_message = "เส้นทางไปที่มาหาลัยKMUTT";
+				$reply_message = "https://goo.gl/maps/D2sFxAPfZdCfkvcRA";
 				
-				$result = file_get_contents('https://goo.gl/maps/D2sFxAPfZdCfkvcRA');   // Get request content
+				//$result = file_get_contents('https://goo.gl/maps/D2sFxAPfZdCfkvcRA');   // Get request content
 
                                 $result_json = json_decode($result, true);   // Decode JSON request
 			}
